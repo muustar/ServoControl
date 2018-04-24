@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.feco.servocontrol.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/icon" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px"
+        android:layout_marginTop="20sp">
+
+    </WebView>
+
+
+    <Button
+        android:id="@+id/jobbGomb"
+        android:layout_width="80sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:background="#80f57c00"
+        android:tag="jobb"
+        tools:layout_editor_absoluteX="461dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/balGomb"
+        android:layout_width="80sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:alpha="0"
+        android:background="#80f57c00"
+        android:tag="bal" />
+
+
+    <Button
+        android:id="@+id/felGomb"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:background="#80f57c00"
+        android:tag="fel" />
+
+    <Button
+        android:id="@+id/leGomb"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:alpha="0"
+        android:background="#80f57c00"
+        android:tag="le" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="2sp"
+        android:progressDrawable="@drawable/horizontalprogressbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBarV"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="8sp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0sp"
+        android:paddingLeft="2sp"
+        android:paddingTop="8sp"
+        android:progressDrawable="@drawable/verticalprogressbar"
+
+        />
+
+    <WebView
+        android:id="@+id/webviewUsbCamera"
+        android:layout_width="200sp"
+        android:layout_height="150sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageHiba"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCountDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/webview"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:alpha="0">
+
+        <ProgressBar
+            android:id="@+id/progressBarCountDown"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="90"
+            android:progressDrawable="@drawable/circular_progress_bar" />
+
+        <TextView
+            android:id="@+id/textProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="99"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
